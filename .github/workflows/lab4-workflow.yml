@@ -6,6 +6,9 @@ on: push
 jobs:
     npm-package:
       runs-on: ubuntu-latest
+      permissions:
+        contents: read
+        packages: write
       steps:
         - name: Checkout Repository
           uses: actions/checkout@v4
